@@ -1,0 +1,22 @@
+/**
+ * WooCommerce Images Product Tab
+ *
+ * Author: Rafasashi
+ * Author URL: https://code.recuweb.com
+ * Plugin URL: https://code.recuweb.com
+ * Version: 2.1
+ */
+
+.woocommerce-Tabs-panel--images ul{
+	list-style: none;
+	min-height: 150px;
+	width: 100%;
+	margin: 0;
+}
+
+.woocommerce-Tabs-panel--images ul li{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	list-style: none !important;
+}
