@@ -50,13 +50,13 @@
 							
 							$api_params = array(
 								'wlm_action' 		=> 'wlm_check',
-								'secret_key' 		=> RW_SECRET_KEY,
+								'secret_key' 		=> REWCM_SECRET_KEY,
 								'license_key'		=> $license->key,
 							);
 
 							// Send query to the license manager server
 							
-							$query = esc_url_raw(add_query_arg($api_params, RW_SERVER_URL));
+							$query = esc_url_raw(add_query_arg($api_params, REWCM_SERVER_URL));
 							
 							$response = wp_remote_get($query, array('timeout' => 20, 'sslverify' => false));
 							
@@ -137,7 +137,7 @@
 				// API query parameters
 				$api_params = array(
 					'wlm_action' 		=> 'wlm_activate',
-					'secret_key' 		=> RW_SECRET_KEY,
+					'secret_key' 		=> REWCM_SECRET_KEY,
 					'license_key'		=> $license_key,
 					'registered_domain' => $_SERVER['SERVER_NAME'],
 					'item_reference' 	=> urlencode($plugin_data['Name']),
@@ -145,7 +145,7 @@
 
 				// Send query to the license manager server
 				
-				$query = esc_url_raw(add_query_arg($api_params, RW_SERVER_URL));
+				$query = esc_url_raw(add_query_arg($api_params, REWCM_SERVER_URL));
 				
 				$response = wp_remote_get($query, array('timeout' => 20, 'sslverify' => false));
 				
@@ -201,14 +201,14 @@
 				// API query parameters
 				$api_params = array(
 					'wlm_action' 		=> 'wlm_deactivate',
-					'secret_key' 		=> RW_SECRET_KEY,
+					'secret_key' 		=> REWCM_SECRET_KEY,
 					'license_key' 		=> $license_key,
 					'registered_domain' => $_SERVER['SERVER_NAME'],
 					'item_reference' 	=> urlencode($plugin_data['Name']),
 				);
 
 				// Send query to the license manager server
-				$query = esc_url_raw(add_query_arg($api_params, RW_SERVER_URL));
+				$query = esc_url_raw(add_query_arg($api_params, REWCM_SERVER_URL));
 				$response = wp_remote_get($query, array('timeout' => 20, 'sslverify' => false));
 
 				// Check for error in the response
