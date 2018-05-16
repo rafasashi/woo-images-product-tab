@@ -16,7 +16,7 @@ msgstr ""
 
 #: D:\Dropbox\Sebs
 #: Studio\woocommerce-images-product-tab\plugin\trunk/woocommerce-images-product-tab.php:66
-msgid "Images Product Tab"
+msgid "Product Images Tab"
 msgstr "Aba de Fotos dos Produtos"
 
 #: D:\Dropbox\Sebs

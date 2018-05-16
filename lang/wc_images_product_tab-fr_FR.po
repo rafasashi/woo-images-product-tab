@@ -4,7 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2013-06-13 13:11+0100\n"
 "PO-Revision-Date: 2013-06-13 13:45+0100\n"
 "Last-Translator: \n"
-"Language-Team: Seb's Studio <sebastien@sebs-studio.com>\n"
+"Language-Team: Code Market <service@recuweb.com>\n"
 "Language: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,8 +15,8 @@ msgstr ""
 
 #: D:\Dropbox\Sebs
 #: Studio\woocommerce-images-product-tab\plugin\trunk/woocommerce-images-product-tab.php:71
-msgid "Images Product Tab"
-msgstr "Images Tab du produit"
+msgid "Product Images Tab"
+msgstr "Onglet images du produit"
 
 #: D:\Dropbox\Sebs
 #: Studio\woocommerce-images-product-tab\plugin\trunk/woocommerce-images-product-tab.php:77

@@ -56,6 +56,10 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 ### Changelog
 
-#### 3.0.0 - 07/06/2018
+#### 3.0.1 - 16/05/2018
+
+* Tab priority field
+
+#### 3.0.0 - 07/05/2018
 
 * Publicaly Released.

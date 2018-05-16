@@ -4,7 +4,7 @@ Tags: ecommerce, e-commerce, commerce, woocommerce, images, images, extension, g
 Donate link: https://code.recuweb.com/download/woocommerce-images-product-tab/
 Requires at least: 4.6
 Tested up to: 4.9.5
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: GPLv3
 License URI: https://code.recuweb.com/product-licenses/
 
@@ -26,13 +26,15 @@ Extends WooCommerce to allow you to display all images attached to a product in 
 - DISABLE IMAGES TAB – Diable images tab for some products only using the checkbox in the general settings of the product.
 - SELECT IMAGES SIZE – Select between thumbnail, medium, large or full to change the size of the images displayed under the product tab.
 
+More information about [WooCommerce Images Product Tab ](https://code.recuweb.com/download/woocommerce-images-product-tab/)
+
 = Localization =
 
 * English
 
 = Documentation =
 
-For all documentation on this plugin go to: https://code.recuweb.com/download/woocommerce-images-product-tab/
+For all documentation on this plugin go to: [https://code.recuweb.com/download/woocommerce-images-product-tab/](https://code.recuweb.com/download/woocommerce-images-product-tab/)
 
 == Installation ==
 
@@ -64,6 +66,10 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 == Changelog ==
 
-= 3.0.0 - 07/06/2018 =
+= 3.0.1 - 16/05/2018 =
 
-* Publicaly Released.
+* Tab priority field
+
+= 3.0.0 - 07/05/2018 =
+
+* Publicaly Released

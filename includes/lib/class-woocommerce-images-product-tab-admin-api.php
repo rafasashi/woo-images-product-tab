@@ -200,7 +200,6 @@ class WooCommerce_Images_Product_Tab_Admin_API {
 				echo '</p>';				
 					 
 			break;
-
 		}
 
 		switch( $field['type'] ) {

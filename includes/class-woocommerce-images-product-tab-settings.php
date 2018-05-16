@@ -84,7 +84,7 @@ class WooCommerce_Images_Product_Tab_Settings {
 			add_menu_page( 'rew_plugin_panel', 'Code Market', 'nosuchcapability', 'rew_plugin_panel', NULL, $logo, $position );
 		}
 
-		add_submenu_page( 'rew_plugin_panel', 'Images Product Tab', 'Images Product Tab', 'manage_options', 'woocommerce-images-product-tab', array( $this, 'settings_page' ) );
+		add_submenu_page( 'rew_plugin_panel', 'Product Images Tab', 'Product Images Tab', 'manage_options', 'woocommerce-images-product-tab', array( $this, 'settings_page' ) );
 		remove_submenu_page( 'rew_plugin_panel', 'rew_plugin_panel' );
 	}
 

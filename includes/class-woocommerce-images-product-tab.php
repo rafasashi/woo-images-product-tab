@@ -148,7 +148,7 @@ class WooCommerce_Images_Product_Tab {
 
 			$this->title = get_option('woocommerce_product_images_tab_title','Images');
 			
-			$this->lightbox = get_option('woocommerce_product_images_tab_lightbox','no');
+			$this->lightbox = get_option('woocommerce_product_images_tab_lightbox','yes');
 			
 			$this->size = get_option('woocommerce_product_images_tab_size','thumbnail');
 			
@@ -167,10 +167,24 @@ class WooCommerce_Images_Product_Tab {
 			
 			array(
 			
-				'name' 	=> __( 'Images Product Tab', 'wc_images_product_tab' ),
+				'name' 	=> __( 'Product Images Tab', 'wc_images_product_tab' ),
 				'type' 	=> 'title',
 				'desc' 	=> '',
 				'id' 	=> 'images_product_tab'
+			),
+			array(  
+				'name' => __('Tab Name', 'wc_images_product_tab'),
+				'desc' 		=> __('The name of the tab in the product page', 'wc_images_product_tab'),
+				'id' 		=> 'woocommerce_product_images_tab_title',
+				'type' 		=> 'text',
+				'default'	=> __('Images', 'wc_images_product_tab'),
+			),
+			array(  
+				'name' => __('Tab Position', 'wc_images_product_tab'),
+				'desc' 		=> __('The position of the tab in the list', 'wc_images_product_tab'),
+				'id' 		=> 'woocommerce_product_images_tab_priority',
+				'type' 		=> 'number',
+				'default'	=> 10,
 			),
 			array(  
 				
@@ -187,17 +201,11 @@ class WooCommerce_Images_Product_Tab {
 				'default'	=> 'thumbnail',
 			),
 			array(  
-				'name' => __('Tab Name', 'wc_images_product_tab'),
-				'desc' 		=> __('The name of the tab in the product page', 'wc_images_product_tab'),
-				'id' 		=> 'woocommerce_product_images_tab_title',
-				'type' 		=> 'text',
-				'default'	=> __('Images', 'wc_images_product_tab'),
-			),
-			array(  
 				'name' => __('Enable Lightbox', 'wc_images_product_tab'),
-				'desc' 		=> __('Enable WooCommerce lightbox for images in the tab', 'wc_images_product_tab'),
+				'desc' 		=> __('Enable Lightbox for images in the tab', 'wc_images_product_tab'),
 				'id' 		=> 'woocommerce_product_images_tab_lightbox',
 				'type' 		=> 'checkbox',
+				'default' 	=> 'yes',
 			),
 			array(
 				'type' => 'sectionend',
