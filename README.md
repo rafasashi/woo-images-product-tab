@@ -56,6 +56,10 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 ### Changelog
 
+#### 3.0.2 - 04/6/2018
+
+* Tab position fixed
+
 #### 3.0.1 - 16/05/2018
 
 * Tab priority field

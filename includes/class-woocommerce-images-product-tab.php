@@ -152,7 +152,7 @@ class WooCommerce_Images_Product_Tab {
 			
 			$this->size = get_option('woocommerce_product_images_tab_size','thumbnail');
 			
-			$this->priority = get_option('woocommerce_product_images_tab_priority',10);	
+			$this->priority = intval( get_option('woocommerce_product_images_tab_priority',10) );	
 		}
 
 		/* Localisation */
