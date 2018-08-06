@@ -3,8 +3,8 @@ Contributors: rafasashi
 Tags: ecommerce, e-commerce, commerce, woocommerce, images, images, extension, gallery, product, tab
 Donate link: https://code.recuweb.com/download/woocommerce-images-product-tab/
 Requires at least: 4.6
-Tested up to: 4.9.5
-Stable tag: 3.0.2
+Tested up to: 4.9.8
+Stable tag: 3.0.3
 License: GPLv3
 License URI: https://code.recuweb.com/product-licenses/
 
@@ -65,6 +65,10 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 1. Add a new tab to the product page to display all the product images.
 
 == Changelog ==
+
+= 3.0.3 - 05/8/2018 =
+
+* Premium ID fixed
 
 = 3.0.2 - 04/6/2018 =
 

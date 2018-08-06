@@ -3,13 +3,13 @@
  * Plugin Name: WooCommerce Images Product Tab
  * Plugin URI: https://code.recuweb.com/download/woocommerce-images-product-tab/
  * Description: Extends WooCommerce to allow you to display all images attached to a product in a new tab on the single product page.
- * Version: 3.0.2
+ * Version: 3.0.3
  * Author: Rafasashi
  * Author URI: https://code.recuweb.com/about-us/
  * Requires at least: 4.6
- * Tested up to: 4.9.5
+ * Tested up to: 4.9.8
  *
- * Text Domain: wc_images_product_tab
+ * Text Domain: wc-images-product-tab
  * Domain Path: /lang/
  * 
  * Copyright: © 2018 Recuweb.
@@ -37,6 +37,11 @@
 	if(!defined('REWCM_SERVER_URL')){
 		
 		define('REWCM_SERVER_URL', 'https://code.recuweb.com');
+	}
+	
+	if(!defined('WIPT_PRODUCT_ID')){
+		
+		define('WIPT_PRODUCT_ID', '5677');
 	}
 
 	// Load plugin class files
@@ -86,7 +91,7 @@
 			
 			if( $current_screen->parent_base == 'plugins' ){
 				
-				echo '<div class="error"><p>WooCommerce Images Product Tab '.__('requires <a href="http://www.woothemes.com/woocommerce/" target="_blank">WooCommerce</a> to be activated in order to work. Please install and activate <a href="'.admin_url('plugin-install.php?tab=search&type=term&s=WooCommerce').'" target="_blank">WooCommerce</a> first.', 'wc_book_chapter').'</p></div>';
+				echo '<div class="error"><p>WooCommerce Images Product Tab '.__('requires <a href="http://www.woothemes.com/woocommerce/" target="_blank">WooCommerce</a> to be activated in order to work. Please install and activate <a href="'.admin_url('plugin-install.php?tab=search&type=term&s=WooCommerce').'" target="_blank">WooCommerce</a> first.', 'wc-images-product-tab').'</p></div>';
 			}
 		});
 	}

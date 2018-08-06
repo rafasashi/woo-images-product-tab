@@ -56,6 +56,10 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 ### Changelog
 
+#### 3.0.3 - 05/8/2018
+
+* Premium ID fixed
+
 #### 3.0.2 - 04/6/2018
 
 * Tab position fixed
