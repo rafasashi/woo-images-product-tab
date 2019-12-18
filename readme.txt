@@ -3,8 +3,8 @@ Contributors: rafasashi
 Tags: ecommerce, e-commerce, commerce, woocommerce, images, images, extension, gallery, product, tab
 Donate link: https://code.recuweb.com/download/woocommerce-images-product-tab/
 Requires at least: 4.6
-Tested up to: 4.9.8
-Stable tag: 3.0.3
+Tested up to: 5.3
+Stable tag: 3.0.4
 License: GPLv3
 License URI: https://code.recuweb.com/product-licenses/
 

@@ -20,7 +20,7 @@ class WooCommerce_Images_Product_Tab {
 	 * @access  public
 	 * @since   1.0.0
 	 */
-	public $license = null;
+
 	public $notices = null;
 	public $settings = null;
 	public $woo_settings = null;
@@ -142,18 +142,13 @@ class WooCommerce_Images_Product_Tab {
 			$this->admin = new WooCommerce_Images_Product_Tab_Admin_API($this);
 		}
 		
-		$this->license = new WooCommerce_Images_Product_Tab_License($this);
-
-		if( $this->license->is_valid() ){
-
-			$this->title = get_option('woocommerce_product_images_tab_title','Images');
-			
-			$this->lightbox = get_option('woocommerce_product_images_tab_lightbox','yes');
-			
-			$this->size = get_option('woocommerce_product_images_tab_size','thumbnail');
-			
-			$this->priority = intval( get_option('woocommerce_product_images_tab_priority',10) );	
-		}
+		$this->title = 'Images';
+		
+		$this->lightbox = 'yes';
+		
+		$this->size = 'thumbnail';
+		
+		$this->priority = 10;	
 
 		/* Localisation */
 		
@@ -236,19 +231,6 @@ class WooCommerce_Images_Product_Tab {
 			add_action('woocommerce_product_tabs', array($this, 'images_product_tabs'), 25.5);
 			add_action('woocommerce_product_tab_panels', array($this, 'images_product_tabs_panel'), 25.5);
 		}
-		
-		if( $this->license->is_valid() ){
-			
-			// Settings
-			
-			add_action('woocommerce_settings_catalog_options_after', array($this, 'images_tab_admin_settings'));
-			add_action('woocommerce_update_options', array($this, 'save_images_tab_admin_settings'));
-		
-			// Product options
-			
-			add_action('woocommerce_product_options_general_product_data', array($this, 'images_tab_panel_product_options'));
-			add_action('woocommerce_process_product_meta', array($this, 'images_tab_panel_product_options_save'));			
-		}
 	}
 
 	/**
@@ -287,11 +269,6 @@ class WooCommerce_Images_Product_Tab {
 		
 		$disabled = 'no';
 		
-		if( $this->license->is_valid() ){
-		
-			$disabled = get_post_meta($post->ID, 'woocommerce_disable_product_images', true);
-		}
-		
 		if($countImages > 0 && $disabled != 'yes'){
 
 			$tabs['images'] = array(
@@ -321,11 +298,6 @@ class WooCommerce_Images_Product_Tab {
 		$countImages = count($attachment_ids);
 		
 		$disabled = 'no';
-		
-		if( $this->license->is_valid() ){
-		
-			$disabled = get_post_meta($post->ID, 'woocommerce_disable_product_images', true);
-		}
 		
 		if($countImages > 0 && $disabled != 'yes'){
 			
@@ -362,11 +334,6 @@ class WooCommerce_Images_Product_Tab {
 		$countImages = count($attachment_ids);
 		
 		$disabled = 'no';
-		
-		if( $this->license->is_valid() ){
-		
-			$disabled = get_post_meta($post->ID, 'woocommerce_disable_product_images', true);
-		}
 		
 		if($countImages > 0 && $disabled != 'yes'){
 			
@@ -484,12 +451,6 @@ class WooCommerce_Images_Product_Tab {
 		wp_register_style( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'css/frontend.css', array(), $this->_version );
 		wp_enqueue_style( $this->_token . '-frontend' );		
 		
-		if( $this->lightbox == 'yes' && $this->license->is_valid() ){
-		
-			wp_register_style( $this->_token . '-simpleLightbox', esc_url( $this->assets_url ) . 'css/simpleLightbox.min.css', array(), $this->_version );
-			wp_enqueue_style( $this->_token . '-simpleLightbox' );
-		}
-		
 	} // End enqueue_styles ()
 
 	/**
@@ -499,15 +460,7 @@ class WooCommerce_Images_Product_Tab {
 	 * @return  void
 	 */
 	public function enqueue_scripts () {
-		
-		if( $this->lightbox == 'yes' && $this->license->is_valid() ){
-		
-			wp_register_script( $this->_token . '-simpleLightbox', esc_url( $this->assets_url ) . 'js/simpleLightbox.min.js', array( 'jquery' ), $this->_version );
-			wp_enqueue_script( $this->_token . '-simpleLightbox' );
-		
-			wp_register_script( $this->_token . '-lightbox-frontend', esc_url( $this->assets_url ) . 'js/lightbox.js', array( 'jquery',$this->_token . '-simpleLightbox' ), $this->_version );
-			wp_enqueue_script( $this->_token . '-lightbox-frontend' );		
-		}
+
 			
 	} // End enqueue_scripts ()
 

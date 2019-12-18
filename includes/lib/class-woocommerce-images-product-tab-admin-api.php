@@ -172,34 +172,7 @@ class WooCommerce_Images_Product_Tab_Admin_API {
 			    </div>
 			    <?php
 			break;
-			
-			case 'license':
-				
-				if( !empty($data) ){
-				
-					$is_valid = $this->parent->license->is_valid();
-				}
-				else{
-					
-					$is_valid = false;
-				}
-			
-				echo '<input class="regular-text" type="text" id="' . esc_attr( $option_name ) . '" name="' . esc_attr( $option_name ) . '"  value="' . $data . '" ' . ( $is_valid ? 'disabled' : '') . '>';
-				echo '<p class="submit">';
-								
-					if( !$is_valid ){
-						
-						echo '<input type="submit" name="activate_license" value="Activate" class="button-primary" />';
-					}
-					else{
-						
-						echo '<input type="hidden" name="' . esc_attr( $option_name ) . '" value="'.$data.'" />';
-						echo '<input type="submit" name="deactivate_license" value="Deactivate" class="button" />';
-					}
-					
-				echo '</p>';				
-					 
-			break;
+
 		}
 
 		switch( $field['type'] ) {
