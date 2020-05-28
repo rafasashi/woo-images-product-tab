@@ -157,7 +157,28 @@ class WooCommerce_Images_Product_Tab {
 		load_plugin_textdomain('wc_images_product_tab', false, dirname(plugin_basename(__FILE__)).'/lang/');
 		
 		add_action('woocommerce_init', array($this, 'init'));
+		
+		add_filter('woocommerce_get_sections_products',function($sections){
+			
+			$sections['rew-tabs'] = __( 'Tabs', 'woocommerce' );
+			
+			return $sections;
+			
+		},10,1);
+			
+		add_filter('woocommerce_product_settings', function( $settings ){
+			
+			global $current_section;
 
+			if( $current_section == 'rew-tabs' ){
+				
+				return array();
+			}
+			
+			return $settings;
+			
+		},9999999999);
+		
 		$this->woo_settings = array(
 			
 			array(
@@ -372,20 +393,6 @@ class WooCommerce_Images_Product_Tab {
 				echo '</div>'; 
 			}
 		}
-	}
-
-	// Adds a few settings to control the images in the tab.
-	
-	function images_tab_admin_settings(){
-		
-		global $settings;
-
-		woocommerce_admin_fields($this->woo_settings);
-	}
-
-	function save_images_tab_admin_settings(){
-		
-		woocommerce_update_options($this->woo_settings);
 	}
 
 	// Adds the option to disable the images tab on the product page.
