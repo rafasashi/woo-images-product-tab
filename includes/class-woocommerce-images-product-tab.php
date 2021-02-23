@@ -114,7 +114,7 @@ class WooCommerce_Images_Product_Tab {
 		$this->dir 			= dirname( $this->file );
 		$this->views   		= trailingslashit( $this->dir ) . 'views';
 		$this->assets_dir 	= trailingslashit( $this->dir ) . 'assets';
-		$this->assets_url 	= esc_url( trailingslashit( plugins_url( '/assets/', $this->file ) ) );
+		$this->assets_url 	= home_url( trailingslashit( str_replace( ABSPATH, '', $this->dir ))  . 'assets/' );
 
 		$this->script_suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
@@ -455,8 +455,11 @@ class WooCommerce_Images_Product_Tab {
 	 */
 	public function enqueue_styles () {
 		
-		wp_register_style( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'css/frontend.css', array(), $this->_version );
-		wp_enqueue_style( $this->_token . '-frontend' );		
+		if( is_product() ){
+			
+			wp_register_style( $this->_token . '-frontend', esc_url( $this->assets_url ) . 'css/frontend.css', array(), $this->_version );
+			wp_enqueue_style( $this->_token . '-frontend' );		
+		}
 		
 	} // End enqueue_styles ()
 
@@ -468,7 +471,8 @@ class WooCommerce_Images_Product_Tab {
 	 */
 	public function enqueue_scripts () {
 
-			
+		
+		
 	} // End enqueue_scripts ()
 
 	/**
